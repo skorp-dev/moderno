@@ -32,7 +32,8 @@ gulp.task('style', function(){
 gulp.task('script', function(){
     return gulp.src([
         'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+        'node_modules/mixitup/dist/mixitup.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -44,7 +45,7 @@ gulp.task('html', function(){
     .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('html', function(){
+gulp.task('js', function(){
     return gulp.src('app/js/*.js')
     .pipe(browserSync.reload({stream: true}))
 });
@@ -61,7 +62,7 @@ gulp.task('browser-sync', function(){
 gulp.task('watch', function(){
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))
     gulp.watch('app/*html', gulp.parallel('html'))
-    gulp.watch('app/js/*.js', gulp.parallel('sass'));
+    gulp.watch('app/js/*.js', gulp.parallel('js'));
 });
 
 
