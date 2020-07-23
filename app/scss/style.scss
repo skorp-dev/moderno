@@ -319,13 +319,14 @@
     &:hover {
         .advantages__item-images {
             background-color: $green;
-            path{
+
+            path {
                 fill: #fff;
             }
         }
 
         .advantages__item-title {
-           color: $green;
+            color: $green;
         }
     }
 
@@ -355,17 +356,64 @@
 }
 
 .icosvg-1 {
-    svg{
+    svg {
         width: 50px;
     }
 }
+
 .icosvg-2 {
     svg {
         width: 62px;
     }
 }
+
 .icosvg-3 {
     svg {
         width: 66px;
     }
 }
+
+// Advantages end 
+// Author start 
+
+.author {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+        max-width: 650px;
+        width: 100%;
+        min-height: 215px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        margin-right: 45px;
+        max-width: 262px;
+
+        span {
+            @include f700;  
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+    }
+}
+
+// Author end 
+//  start 
