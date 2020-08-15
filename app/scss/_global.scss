@@ -1,4 +1,3 @@
-
 html {
     box-sizing: border-box;
 }
@@ -9,12 +8,31 @@ html {
     box-sizing: inherit;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto-Regular', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     color: $text;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
 }
 
 a {
@@ -48,6 +66,10 @@ li {
     }
 }
 
+.page-content {
+    background-color: $grey;
+}
+
 .title {
     text-align: center;
     color: $bg;
@@ -57,7 +79,42 @@ li {
     margin-bottom: 30px;
 }
 
-.rate-star{
+.rate-star {
     display: inline-block;
     margin-right: 13px;
+}
+
+.breadcrumbs {
+    &__inner {
+        padding: 45px 0 40px;
+    }
+
+    &__list {
+        li {
+            display: inline-block;
+            position: relative;
+
+            &+li {
+                padding-left: 24px;
+
+                &::before {
+                    content: '-';
+                    position: absolute;
+                    left: 8px;
+                    color: $green;
+                }
+            }
+
+            &:last-child {
+                a,
+                span {
+                    color: $bg;
+                }
+            }
+        }
+
+        a {
+            color: #b0bec5;
+        }
+    }
 }
